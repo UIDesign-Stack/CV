@@ -29,15 +29,15 @@ const certificates = [
 <template>
   <ProfileCard />
 
-  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-zinc-900/0 rounded-2xl shadow-sm p-8">
 
     <div class="flex items-center gap-3 mb-6">
-      <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
+      <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
         <CheckBadgeIcon class="w-5 h-5 text-orange-500" />
       </div>
       <div>
-        <h2 class="font-bold text-gray-900 text-xl">Certificates</h2>
-        <p class="text-sm text-gray-500">Sertifikat dan penghargaan yang telah saya peroleh.</p>
+        <h2 class="font-bold text-zinc-50 text-xl">Certificates</h2>
+        <p class="text-sm text-zinc-400">Sertifikat dan penghargaan yang telah saya peroleh.</p>
       </div>
     </div>
 
@@ -45,7 +45,7 @@ const certificates = [
       <div
         v-for="cert in certificates"
         :key="cert.title + cert.date"
-        class="border border-gray-100 rounded-2xl p-5 flex items-start gap-4"
+        class="border border-zinc-800 rounded-2xl p-5 flex items-start gap-4"
       >
         <div class="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
           <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -54,9 +54,9 @@ const certificates = [
         </div>
 
         <div class="flex-1">
-          <h3 class="font-bold text-gray-900">{{ cert.title }}</h3>
+          <h3 class="font-bold text-zinc-50">{{ cert.title }}</h3>
           <p class="text-orange-500 text-sm font-medium mt-0.5">{{ cert.subtitle }}</p>
-          <div class="flex items-center gap-1.5 text-sm text-gray-500 mt-2">
+          <div class="flex items-center gap-1.5 text-sm text-zinc-400 mt-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
             </svg>

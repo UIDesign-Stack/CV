@@ -38,15 +38,15 @@ const repoGroups = [
 <template>
   <ProfileCard />
 
-  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-zinc-900/0 rounded-2xl shadow-sm p-8">
 
     <div class="flex items-center gap-3 mb-6">
-      <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
+      <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
         <FolderIcon class="w-5 h-5 text-orange-500" />
       </div>
       <div>
-        <h2 class="font-bold text-gray-900 text-xl">Portfolio</h2>
-        <p class="text-sm text-gray-500">Kumpulan proyek yang telah saya kerjakan di GitHub.</p>
+        <h2 class="font-bold text-zinc-50 text-xl">Portfolio</h2>
+        <p class="text-sm text-zinc-400">Kumpulan proyek yang telah saya kerjakan di GitHub.</p>
       </div>
     </div>
 
@@ -65,7 +65,7 @@ const repoGroups = [
             </svg>
           </div>
           <div>
-            <p class="font-bold text-gray-900 group-hover:text-orange-500 transition">github.com/{{ group.account }}</p>
+            <p class="font-bold text-zinc-50 group-hover:text-orange-500 transition">github.com/{{ group.account }}</p>
             <span
               class="inline-block text-xs font-medium px-2 py-0.5 rounded-full text-white mt-0.5"
               :class="group.color"
@@ -80,7 +80,7 @@ const repoGroups = [
           <div
             v-for="repo in group.repos"
             :key="repo.name"
-            class="border border-gray-100 rounded-xl p-4 hover:border-orange-200 transition"
+            class="border border-zinc-800 rounded-xl p-4 hover:border-orange-200 transition"
           >
             <div class="flex items-center gap-2 mb-1">
               <span
@@ -89,9 +89,9 @@ const repoGroups = [
                 >
                 {{ repo.icon || group.icon }}
               </span>
-              <h3 class="font-bold text-gray-900 text-sm">{{ repo.name }}</h3>
+              <h3 class="font-bold text-zinc-50 text-sm">{{ repo.name }}</h3>
             </div>
-            <p class="text-xs text-gray-500 leading-relaxed">{{ repo.desc }}</p>
+            <p class="text-xs text-zinc-400 leading-relaxed">{{ repo.desc }}</p>
           </div>
         </div>
 

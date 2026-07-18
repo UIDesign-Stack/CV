@@ -37,16 +37,16 @@ const educations = [
 <template>
   <ProfileCard />
 
-  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-zinc-900/0 rounded-2xl shadow-sm p-8">
 
     <div class="flex items-start justify-between mb-6 gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
+        <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
           <AcademicCapIcon class="w-5 h-5 text-orange-500" />
         </div>
         <div>
-          <h2 class="font-bold text-gray-900 text-xl">Education</h2>
-          <p class="text-sm text-gray-500">Riwayat pendidikan formal yang telah saya tempuh.</p>
+          <h2 class="font-bold text-zinc-50 text-xl">Education</h2>
+          <p class="text-sm text-zinc-400">Riwayat pendidikan formal yang telah saya tempuh.</p>
         </div>
       </div>
 
@@ -57,7 +57,7 @@ const educations = [
       </svg>
     </div>
 
-    <div class="relative pl-6 border-l-2 border-gray-100 space-y-4">
+    <div class="relative pl-6 border-l-2 border-zinc-800 space-y-4">
       <div
         v-for="edu in educations"
         :key="edu.school"
@@ -65,7 +65,7 @@ const educations = [
       >
         <span class="absolute -left-[29px] top-6 w-3 h-3 rounded-full bg-orange-500 ring-4 ring-white"></span>
 
-        <div class="border border-gray-100 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+        <div class="border border-zinc-800 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
 
           <!-- Ikon gedung (SVG custom) -->
           <div class="w-14 h-14 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
@@ -75,13 +75,13 @@ const educations = [
           </div>
 
           <div class="flex-1">
-            <h3 class="font-bold text-gray-900">{{ edu.school }}</h3>
+            <h3 class="font-bold text-zinc-50">{{ edu.school }}</h3>
             <p class="text-orange-500 text-sm font-medium">{{ edu.major }}</p>
-            <p v-if="edu.desc" class="text-sm text-gray-500 mt-1">{{ edu.desc }}</p>
+            <p v-if="edu.desc" class="text-sm text-zinc-400 mt-1">{{ edu.desc }}</p>
           </div>
 
           <div class="flex flex-row sm:flex-col items-center sm:items-end gap-2 sm:gap-2 flex-shrink-0 flex-wrap">
-            <div class="flex items-center gap-1.5 text-sm text-gray-500">
+            <div class="flex items-center gap-1.5 text-sm text-zinc-400">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
               </svg>

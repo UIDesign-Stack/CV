@@ -62,16 +62,16 @@ const learning = [
 <template>
   <ProfileCard />
 
-  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-zinc-900/0 rounded-2xl shadow-sm p-8">
 
     <div class="flex items-start justify-between mb-6">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
+        <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
           <ChartBarIcon class="w-5 h-5 text-orange-500" />
         </div>
         <div>
-          <h2 class="font-bold text-gray-900 text-xl">Skills</h2>
-          <p class="text-sm text-gray-500">Kemampuan yang saya kuasai di berbagai bidang.</p>
+          <h2 class="font-bold text-zinc-50 text-xl">Skills</h2>
+          <p class="text-sm text-zinc-400">Kemampuan yang saya kuasai di berbagai bidang.</p>
         </div>
       </div>
     </div>
@@ -80,39 +80,39 @@ const learning = [
       <div
         v-for="group in skillGroups"
         :key="group.category"
-        class="border border-gray-100 rounded-2xl p-5"
+        class="border border-zinc-800 rounded-2xl p-5"
       >
-        <h3 class="font-bold text-gray-900 mb-3">{{ group.category }}</h3>
+        <h3 class="font-bold text-zinc-50 mb-3">{{ group.category }}</h3>
         <div class="flex flex-wrap gap-2">
           <div
             v-for="tool in group.tools"
             :key="tool.name"
-            class="flex items-center gap-2 bg-gray-50 rounded-xl pl-1.5 pr-3 py-1.5"
+            class="flex items-center gap-2 bg-zinc-900/0 rounded-xl pl-1.5 pr-3 py-1.5"
           >
             <span
               class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold"
-              :class="[tool.color, tool.dark ? 'text-gray-900' : 'text-white']"
+              :class="[tool.color, tool.dark ? 'text-zinc-50' : 'text-white']"
             >
               {{ tool.text }}
             </span>
-            <span class="text-sm text-gray-700 font-medium">{{ tool.name }}</span>
+            <span class="text-sm text-zinc-300 font-medium">{{ tool.name }}</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="border-t border-gray-100 pt-6">
+    <div class="border-t border-zinc-800 pt-6">
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
+        <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
           <AcademicCapIcon class="w-5 h-5 text-orange-500" />
         </div>
-        <h3 class="font-bold text-gray-900">Sedang Dipelajari</h3>
+        <h3 class="font-bold text-zinc-50">Sedang Dipelajari</h3>
       </div>
       <div class="flex flex-wrap gap-3">
         <div
           v-for="item in learning"
           :key="item.name"
-          class="flex items-center gap-2 border border-gray-100 rounded-xl pl-1.5 pr-4 py-2"
+          class="flex items-center gap-2 border border-zinc-800 rounded-xl pl-1.5 pr-4 py-2"
         >
           <span
             class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold text-white"
@@ -120,7 +120,7 @@ const learning = [
           >
             {{ item.text }}
           </span>
-          <span class="text-sm text-gray-700 font-medium">{{ item.name }}</span>
+          <span class="text-sm text-zinc-300 font-medium">{{ item.name }}</span>
         </div>
       </div>
     </div>
