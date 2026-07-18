@@ -26,7 +26,7 @@ const setActiveMenu = inject('setActiveMenu')
       </p>
       <div class="flex gap-3">
         <a
-          href="/CV.pdf"
+          :href="`${import.meta.env.BASE_URL}CV.pdf`"
           download
           class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl font-medium flex items-center gap-2 transition"
         >
