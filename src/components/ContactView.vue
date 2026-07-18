@@ -4,16 +4,36 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/vue/24/outline'
 import { ref } from 'vue'
 
 const contactInfo = [
-  { icon: EnvelopeIcon, label: 'Email', value: 'fajarbekasieditting@email.com' },
-  { icon: PhoneIcon, label: 'No. HP / WhatsApp', value: '+62 821-2457-6792' },
+  { icon: EnvelopeIcon, label: 'Email', value: 'fajarbekasiediting@email.com' },
+  { icon: PhoneIcon, label: 'No. HP / WhatsApp', value: '0812-3456-7890' },
   { icon: MapPinIcon, label: 'Alamat', value: 'Bekasi, Jawa Barat, Indonesia' },
 ]
 
 const form = ref({ name: '', email: '', message: '' })
+const status = ref('') // '', 'sending', 'success', 'error'
 
-function submitForm() {
-  alert('Pesan terkirim (demo)! Nanti bisa dihubungkan ke email/WhatsApp asli.')
-  form.value = { name: '', email: '', message: '' }
+async function submitForm() {
+  status.value = 'sending'
+  try {
+    const response = await fetch('https://formspree.io/f/mojgdqgz', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name: form.value.name,
+        email: form.value.email,
+        message: form.value.message,
+      }),
+    })
+
+    if (response.ok) {
+      status.value = 'success'
+      form.value = { name: '', email: '', message: '' }
+    } else {
+      status.value = 'error'
+    }
+  } catch (err) {
+    status.value = 'error'
+  }
 }
 </script>
 
@@ -101,10 +121,18 @@ function submitForm() {
         </div>
         <button
           type="submit"
-          class="w-full bg-orange-500 hover:bg-orange-600 text-white py-2.5 rounded-xl font-medium transition"
+          :disabled="status === 'sending'"
+          class="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-50 text-white py-2.5 rounded-xl font-medium transition"
         >
-          Kirim Pesan
+          {{ status === 'sending' ? 'Mengirim...' : 'Kirim Pesan' }}
         </button>
+
+        <p v-if="status === 'success'" class="text-green-600 text-sm text-center">
+          Pesan berhasil terkirim! Terima kasih sudah menghubungi.
+        </p>
+        <p v-if="status === 'error'" class="text-red-500 text-sm text-center">
+          Gagal mengirim pesan. Coba lagi nanti.
+        </p>
       </form>
 
     </div>
