@@ -25,26 +25,26 @@ const setActiveMenu = inject('setActiveMenu')
         Saya senang belajar hal baru dan berkomitmen untuk memberikan hasil terbaik.
       </p>
       <div class="flex gap-3">
-        <a
-          :href="`${import.meta.env.BASE_URL}CV.pdf`"
-          download
-          class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl font-medium flex items-center gap-2 transition"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
-          </svg>
-          Download CV
-        </a>
-        <button
-          @click="setActiveMenu('Portfolio')"
-          class="border border-gray-200 hover:bg-gray-50 text-gray-700 px-5 py-3 rounded-xl font-medium flex items-center gap-2 transition"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10"/>
-          </svg>
-          Lihat Portfolio
-        </button>
-      </div>
+          <a
+            :href="`${import.meta.env.BASE_URL}CV.pdf`"
+            download
+            class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-xl font-medium flex items-center gap-2 transition"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+            </svg>
+            Download CV
+          </a>
+          <button
+            @click="setActiveMenu('Portfolio')"
+            class="border border-gray-200 hover:bg-gray-50 text-gray-700 px-5 py-3 rounded-xl font-medium flex items-center gap-2 transition"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10"/>
+            </svg>
+            Lihat Portfolio
+          </button>
+        </div>
     </div>
 
     <!-- Kanan: Info Pribadi -->
