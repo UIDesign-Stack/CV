@@ -5,7 +5,7 @@ import { ref } from 'vue'
 
 const contactInfo = [
   { icon: EnvelopeIcon, label: 'Email', value: 'fajarbekasieditting@email.com' },
-  { icon: PhoneIcon, label: 'No. HP / WhatsApp', value: '0812-3456-7890' },
+  { icon: PhoneIcon, label: 'No. HP / WhatsApp', value: '+62 821-2457-6792' },
   { icon: MapPinIcon, label: 'Alamat', value: 'Bekasi, Jawa Barat, Indonesia' },
 ]
 
