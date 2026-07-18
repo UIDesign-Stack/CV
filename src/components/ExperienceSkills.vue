@@ -27,7 +27,7 @@ const languages = [
 </script>
 
 <template>
-  <div class="col-start-2 col-end-4 row-start-2 bg-white rounded-2xl shadow-sm flex">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm flex flex-col md:flex-row">
 
     <!-- Kiri: Pengalaman Kerja -->
     <div class="flex-1 p-8">
@@ -50,7 +50,7 @@ const languages = [
     </div>
 
     <!-- Kanan: Skills + Bahasa -->
-    <div class="w-96 border-l border-gray-100 p-6 flex-shrink-0">
+    <div class="w-full md:w-96 border-t md:border-t-0 md:border-l border-gray-100 p-6 flex-shrink-0">
 
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">

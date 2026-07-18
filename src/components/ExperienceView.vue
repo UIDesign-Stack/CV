@@ -47,9 +47,9 @@ const experiences = [
 <template>
   <ProfileCard />
 
-  <div class="col-start-2 col-end-4 row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
 
-    <div class="flex items-start justify-between mb-6">
+    <div class="flex items-start justify-between mb-6 gap-4">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
           <BriefcaseIcon class="w-5 h-5 text-orange-500" />
@@ -61,7 +61,7 @@ const experiences = [
       </div>
 
       <!-- Ikon dekoratif tas kerja -->
-      <svg class="w-14 h-14 text-gray-500 opacity-70" fill="none" viewBox="0 0 24 24">
+      <svg class="hidden sm:block w-14 h-14 text-gray-500 opacity-70 flex-shrink-0" fill="none" viewBox="0 0 24 24">
         <path fill="currentColor" d="M9 6V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V6h4a2 2 0 0 1 2 2v3H3V8a2 2 0 0 1 2-2h4Zm2-1.5V6h2V4.5h-2Z"/>
         <path fill="currentColor" opacity="0.7" d="M3 12h18v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6Z"/>
       </svg>
@@ -75,11 +75,11 @@ const experiences = [
       >
         <span class="absolute -left-[29px] top-6 w-3 h-3 rounded-full bg-orange-500 ring-4 ring-white"></span>
 
-        <div class="border border-gray-100 rounded-2xl p-5 flex items-start gap-4">
+        <div class="border border-gray-100 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-start gap-4">
 
           <!-- Logo perusahaan -->
           <div
-            class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
+            class="w-14 h-14 mx-auto sm:mx-0 rounded-xl flex items-center justify-center flex-shrink-0"
             :class="exp.logoBg || 'bg-gray-50 border border-gray-100'"
           >
             <!-- Chart icon -->
@@ -116,7 +116,7 @@ const experiences = [
             <p class="text-sm text-gray-500">{{ exp.desc }}</p>
           </div>
 
-          <span class="inline-flex items-center gap-1.5 bg-green-50 text-green-600 text-xs font-medium px-3 py-1.5 rounded-full flex-shrink-0">
+          <span class="inline-flex items-center gap-1.5 bg-green-50 text-green-600 text-xs font-medium px-3 py-1.5 rounded-full flex-shrink-0 self-start sm:self-auto w-fit">
             <BriefcaseIcon class="w-3.5 h-3.5" />
             {{ exp.type }}
           </span>

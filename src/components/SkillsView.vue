@@ -62,7 +62,7 @@ const learning = [
 <template>
   <ProfileCard />
 
-  <div class="col-start-2 col-end-4 row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
 
     <div class="flex items-start justify-between mb-6">
       <div class="flex items-center gap-3">
@@ -76,7 +76,7 @@ const learning = [
       </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div
         v-for="group in skillGroups"
         :key="group.category"

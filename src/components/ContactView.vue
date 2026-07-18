@@ -40,7 +40,7 @@ async function submitForm() {
 <template>
   <ProfileCard />
 
-  <div class="col-start-2 col-end-4 row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
 
     <div class="flex items-center gap-3 mb-6">
       <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
@@ -52,7 +52,7 @@ async function submitForm() {
       </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
       <!-- Kiri: Info kontak -->
       <div class="space-y-4">
@@ -64,9 +64,9 @@ async function submitForm() {
           <div class="w-11 h-11 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
             <component :is="item.icon" class="w-5 h-5 text-orange-500" />
           </div>
-          <div>
+          <div class="min-w-0 flex-1">
             <p class="text-xs text-gray-500">{{ item.label }}</p>
-            <p class="font-medium text-gray-900">{{ item.value }}</p>
+            <p class="font-medium text-gray-900 break-all">{{ item.value }}</p>
           </div>
         </div>
 

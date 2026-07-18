@@ -30,7 +30,7 @@ const viewMap = {
 
 <template>
   <main class="min-h-screen bg-gray-100 p-8">
-    <div class="grid grid-cols-[320px_1fr_380px] grid-rows-[auto_auto] gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-[320px_1fr_380px] md:grid-rows-[auto_auto] gap-6">
       <Sidebar :active-menu="activeMenu" @update:active-menu="activeMenu = $event" />
 
       <template v-if="activeMenu === 'About Me'">

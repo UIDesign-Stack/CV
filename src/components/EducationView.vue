@@ -37,9 +37,9 @@ const educations = [
 <template>
   <ProfileCard />
 
-  <div class="col-start-2 col-end-4 row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
 
-    <div class="flex items-start justify-between mb-6">
+    <div class="flex items-start justify-between mb-6 gap-4">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
           <AcademicCapIcon class="w-5 h-5 text-orange-500" />
@@ -51,7 +51,7 @@ const educations = [
       </div>
 
       <!-- Ikon dekoratif topi wisuda -->
-      <svg class="w-14 h-14 text-orange-400 opacity-70" fill="none" viewBox="0 0 24 24">
+      <svg class="hidden sm:block w-14 h-14 text-orange-400 opacity-70 flex-shrink-0" fill="none" viewBox="0 0 24 24">
         <path fill="currentColor" d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3Z"/>
         <path fill="currentColor" d="M5 10.18v4.5L12 18l7-3.32v-4.5l-7 3.2-7-3.2Z" opacity="0.6"/>
       </svg>
@@ -65,7 +65,7 @@ const educations = [
       >
         <span class="absolute -left-[29px] top-6 w-3 h-3 rounded-full bg-orange-500 ring-4 ring-white"></span>
 
-        <div class="border border-gray-100 rounded-2xl p-5 flex items-center gap-4">
+        <div class="border border-gray-100 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
 
           <!-- Ikon gedung (SVG custom) -->
           <div class="w-14 h-14 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
@@ -80,7 +80,7 @@ const educations = [
             <p v-if="edu.desc" class="text-sm text-gray-500 mt-1">{{ edu.desc }}</p>
           </div>
 
-          <div class="flex flex-col items-end gap-2 flex-shrink-0">
+          <div class="flex flex-row sm:flex-col items-center sm:items-end gap-2 sm:gap-2 flex-shrink-0 flex-wrap">
             <div class="flex items-center gap-1.5 text-sm text-gray-500">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>

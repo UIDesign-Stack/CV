@@ -24,7 +24,7 @@ const menuItems = [
 </script>
 
 <template>
-  <aside class="col-start-1 row-start-1 row-span-2 bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center">
+  <aside class="md:col-start-1 md:row-start-1 md:row-span-2 bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center">
 
     <div class="relative w-36 h-36 mb-4">
       <div class="absolute inset-0 rounded-full bg-orange-100 translate-x-2 translate-y-2"></div>

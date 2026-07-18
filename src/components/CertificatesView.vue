@@ -29,7 +29,7 @@ const certificates = [
 <template>
   <ProfileCard />
 
-  <div class="col-start-2 col-end-4 row-start-2 bg-white rounded-2xl shadow-sm p-8">
+  <div class="md:col-start-2 md:col-end-4 md:row-start-2 bg-white rounded-2xl shadow-sm p-8">
 
     <div class="flex items-center gap-3 mb-6">
       <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">
@@ -41,7 +41,7 @@ const certificates = [
       </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div
         v-for="cert in certificates"
         :key="cert.title + cert.date"
