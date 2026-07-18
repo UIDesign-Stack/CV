@@ -14,7 +14,7 @@ const cvUrl = `${import.meta.env.BASE_URL}CV.pdf`
 
 <template>
   <div class="md:col-start-2 md:col-end-4 md:row-start-1 bg-white rounded-2xl shadow-sm p-8 flex flex-col md:flex-row gap-8">
-
+    
     <!-- Kiri: Halo Saya -->
     <div class="flex-1">
       <p class="text-gray-500 mb-2">Halo! Saya 👋</p>
