@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, provide } from 'vue'
 import Sidebar from './components/Sidebar.vue'
 import ProfileCard from './components/ProfileCard.vue'
 import ExperienceSkills from './components/ExperienceSkills.vue'
@@ -11,6 +11,12 @@ import CertificatesView from './components/CertificatesView.vue'
 import ContactView from './components/ContactView.vue'
 
 const activeMenu = ref('About Me')
+
+function setActiveMenu(name) {
+  activeMenu.value = name
+}
+
+provide('setActiveMenu', setActiveMenu)
 
 const viewMap = {
   'Education': EducationView,
